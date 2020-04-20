@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="CubeMesh" id=1]
+
+[node name="TestScene" type="Spatial"]
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Camera" type="Camera" parent="MeshInstance"]
+transform = Transform( -0.856666, -0.0348001, -0.514696, -0.251176, 0.899607, 0.357235, 0.450593, 0.435311, -0.779404, -3.86327, 4.93697, -6.02206 )
