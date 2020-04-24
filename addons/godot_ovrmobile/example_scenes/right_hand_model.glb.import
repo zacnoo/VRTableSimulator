@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/touch_controller.dae-a50848cbd1c8e0397226e52a8f6a9c7c.scn"
+path="res://.import/right_hand_model.glb-5462a0aefd8dcabe7f35f5f18c012b18.scn"
 
 [deps]
 
-source_file="res://godot-oculus-mobile-asset-99d0dfece26690bda2bb8adbc8e5c3cc9d27d80a/addons/godot_ovrmobile/example_scenes/touch_controller.dae"
-dest_files=[ "res://.import/touch_controller.dae-a50848cbd1c8e0397226e52a8f6a9c7c.scn" ]
+source_file="res://addons/godot_ovrmobile/example_scenes/right_hand_model.glb"
+dest_files=[ "res://.import/right_hand_model.glb-5462a0aefd8dcabe7f35f5f18c012b18.scn" ]
 
 [params]
 
@@ -17,7 +17,7 @@ nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0
 materials/location=1
-materials/storage=1
+materials/storage=0
 materials/keep_on_reimport=true
 meshes/compress=true
 meshes/ensure_tangents=true

@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/right_hand_model.glb-befc1e502a2651fc835b368559b3d154.scn"
+path="res://.import/left_hand_model.glb-0a7976d29b950727e5aeb313e66702cf.scn"
 
 [deps]
 
-source_file="res://godot-oculus-mobile-asset-99d0dfece26690bda2bb8adbc8e5c3cc9d27d80a/addons/godot_ovrmobile/example_scenes/right_hand_model.glb"
-dest_files=[ "res://.import/right_hand_model.glb-befc1e502a2651fc835b368559b3d154.scn" ]
+source_file="res://addons/godot_ovrmobile/example_scenes/left_hand_model.glb"
+dest_files=[ "res://.import/left_hand_model.glb-0a7976d29b950727e5aeb313e66702cf.scn" ]
 
 [params]
 

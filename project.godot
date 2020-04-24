@@ -21,7 +21,7 @@ config/icon="res://icon.png"
 
 [gdnative]
 
-singletons=[ "res://godot-oculus-mobile-asset-99d0dfece26690bda2bb8adbc8e5c3cc9d27d80a/addons/godot_ovrmobile/godot_ovrmobile.gdnlib" ]
+singletons=[ "res://addons/godot_ovrmobile/godot_ovrmobile.gdnlib", "res://godot-oculus-mobile-asset-99d0dfece26690bda2bb8adbc8e5c3cc9d27d80a/addons/godot_ovrmobile/godot_ovrmobile.gdnlib" ]
 
 [rendering]
 
