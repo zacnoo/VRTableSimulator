@@ -19,6 +19,10 @@ config/name="VR Tabletop Simulator"
 run/main_scene="res://TestScene.tscn"
 config/icon="res://icon.png"
 
+[gdnative]
+
+singletons=[ "res://godot-oculus-mobile-asset-99d0dfece26690bda2bb8adbc8e5c3cc9d27d80a/addons/godot_ovrmobile/godot_ovrmobile.gdnlib" ]
+
 [rendering]
 
 quality/driver/driver_name="GLES2"
