@@ -1,2 +1,6 @@
 # Godot temporary files
 /.import
+
+
+# Android build template files
+/android
