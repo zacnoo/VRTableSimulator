@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://TestScene.gd" type="Script" id=1]
+[ext_resource path="res://objects/Player.tscn" type="PackedScene" id=2]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -13,3 +14,8 @@ material/0 = null
 
 [node name="Camera" type="Camera" parent="MeshInstance"]
 transform = Transform( -0.856666, -0.0348001, -0.514696, -0.251176, 0.899607, 0.357235, 0.450593, 0.435311, -0.779404, -3.86327, 4.93697, -6.02206 )
+
+[node name="ARVROrigin" type="ARVROrigin" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.42607 )
+
+[node name="ARVRCamera" parent="ARVROrigin" instance=ExtResource( 2 )]
