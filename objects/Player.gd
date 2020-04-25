@@ -192,4 +192,3 @@ func _on_RightHand_pinch_pressed(button):
 	if (button == 1): print("Right Middle Pinching");
 	if (button == 2): print("Right Pinky Pinching");
 	if (button == 15): print("Right Ring Pinching");
-
