@@ -67,6 +67,11 @@ func _update_hand_model(hand: ARVRController, model : Spatial, skel: Skeleton):
 				skel.set_bone_pose(_hand_bone_mappings[i], Transform(_vrapi_bone_orientations[i]));
 		else:
 			model.visible = false;
+		
+		# Move the table if the hand is below it
+		if hand.global_transform.origin.y < 0:
+			set_translation(get_translation() + Vector3(0, -hand.global_transform.origin.y, 0))
+		
 		return true;
 	else:
 		return false;
@@ -211,3 +216,11 @@ func _on_RightHand_pinch_pressed(button):
 	if (button == 15): 
 		print("Right Ring Pinching")
 		emit_signal("handPinched","right_ring")
+
+# Temporary hack until we get per-finger collision working properly, or
+# a menu to use something better
+func _on_TempHand_area_entered(area):
+	# If you touch the reset block, move you underground (and the hands
+	# will reset your position in _update_hand_model)
+	if area != $Camera/ResetTableBlock/model/Area: return
+	set_translation(get_translation() + Vector3(0, -5, 0))
