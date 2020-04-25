@@ -1,5 +1,5 @@
 extends Spatial
-signal handPinched(finger)
+signal handPinched(finger);
 var ovr_init_config = null;
 
 var ovr_performance = null;
@@ -182,28 +182,32 @@ func _check_and_perform_runtime_config():
 # they are mapped at the moment to the A/B X/Y and grip/index trigger presses
 func _on_LeftHand_pinch_pressed(button):
 	if (button == 7):
-		print("Left Index Pinching");
-		emit_signal("handPinched","left_index");
+		print("Left Index Pinching")
+		emit_signal("handPinched","left_index")
+		
 	if (button == 1):
-		print("Left Middle Pinching");
-		emit_signal("handPinched","left_middle");	
+		print("Left Middle Pinching")
+		emit_signal("handPinched","left_middle")
+		
 	if (button == 2):
-		print("Left Pinky Pinching");
-		emit_signal("handPinched","left_pinky");	
+		print("Left Pinky Pinching")
+		emit_signal("handPinched","left_pinky")
+		
 	if (button == 15): 
-		print("Left Ring Pinching");
-		emit_signal("handPinched","left_ring");	
+		print("Left Ring Pinching")
+		emit_signal("handPinched","left_ring")
+		
 
 func _on_RightHand_pinch_pressed(button):
 	if (button == 7):
-		print("Right Index Pinching");
-		emit_signal("handPinched","right_index");
+		print("Right Index Pinching")
+		emit_signal("handPinched","right_index")
 	if (button == 1):
-		print("Right Middle Pinching");
-		emit_signal("handPinched","right_middle");	
+		print("Right Middle Pinching")
+		emit_signal("handPinched","right_middle")
 	if (button == 2):
-		print("Right Pinky Pinching");
-		emit_signal("handPinched","right_pinky");	
+		print("Right Pinky Pinching")
+		emit_signal("handPinched","right_pinky")
 	if (button == 15): 
-		print("Right Ring Pinching");
-		emit_signal("handPinched","right_ring");	
+		print("Right Ring Pinching")
+		emit_signal("handPinched","right_ring")
