@@ -31,3 +31,4 @@ shape = SubResource( 3 )
 
 [node name="Cube" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.80928, -1.46144 )
+[connection signal="handPinched" from="ARVROrigin/ARVRCamera" to="." method="_on_Player_handPinched"]

@@ -1,5 +1,5 @@
 extends Spatial
-
+signal handPinched(finger)
 var ovr_init_config = null;
 
 var ovr_performance = null;
@@ -181,14 +181,35 @@ func _check_and_perform_runtime_config():
 # the pinch press gestures are mapped to button presses of the ARVRController
 # they are mapped at the moment to the A/B X/Y and grip/index trigger presses
 func _on_LeftHand_pinch_pressed(button):
-	if (button == 7): print("Left Index Pinching");
-	if (button == 1): print("Left Middle Pinching");
-	if (button == 2): print("Left Pinky Pinching");
-	if (button == 15): print("Left Ring Pinching");
-
+	if (button == 7):
+		print("Left Index Pinching");
+		emit_signal("handPinched","left_index");
+	if (button == 1):
+		print("Left Middle Pinching");
+		emit_signal("handPinched","left_middle");	
+	if (button == 2):
+		print("Left Pinky Pinching");
+		emit_signal("handPinched","left_pinky");	
+	if (button == 15): 
+		print("Left Ring Pinching");
+		emit_signal("handPinched","left_ring");	
 
 func _on_RightHand_pinch_pressed(button):
-	if (button == 7): print("Right Index Pinching");
-	if (button == 1): print("Right Middle Pinching");
-	if (button == 2): print("Right Pinky Pinching");
-	if (button == 15): print("Right Ring Pinching");
+	if (button == 7):
+		print("Right Index Pinching");
+		emit_signal("handPinched","right_index");
+	if (button == 1):
+		print("Right Middle Pinching");
+		emit_signal("handPinched","right_middle");	
+	if (button == 2):
+		print("Right Pinky Pinching");
+		emit_signal("handPinched","right_pinky");	
+	if (button == 15): 
+		print("Right Ring Pinching");
+		emit_signal("handPinched","right_ring");	
+
+func _get_LeftHand_collider():
+	var handMesh = MeshInstance.new();
+	handMesh.mesh = $LeftHand/left_hand_model/ArmatureLeft/Skeleton/l_handMeshNode;
+	var handCollisionShape = handMesh.create_convex_shape();
+	return handCollisionShape;
