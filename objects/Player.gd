@@ -207,9 +207,3 @@ func _on_RightHand_pinch_pressed(button):
 	if (button == 15): 
 		print("Right Ring Pinching");
 		emit_signal("handPinched","right_ring");	
-
-func _get_LeftHand_collider():
-	var handMesh = MeshInstance.new();
-	handMesh.mesh = $LeftHand/left_hand_model/ArmatureLeft/Skeleton/l_handMeshNode;
-	var handCollisionShape = handMesh.create_convex_shape();
-	return handCollisionShape;
